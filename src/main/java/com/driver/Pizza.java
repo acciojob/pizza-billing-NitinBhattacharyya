@@ -57,11 +57,13 @@ public class Pizza {
 
     public void addTakeaway(){
         // your code goes here
-        if(!bag)
-        {
-            bag=true;
-            price+=20;
-        }
+//        if(!bag)
+//        {
+//            bag=true;
+//            price+=20;
+//        }
+        bag=true;
+        price+=20;
     }
 
     public String getBill(){
