@@ -32,27 +32,36 @@ public class Pizza {
 
     public void addExtraCheese(){
         // your code goes here
-        cheese=true;
-        price+=80;
+        if(!cheese)
+        {
+            cheese=true;
+            price+=80;
+        }
     }
 
     public void addExtraToppings(){
         // your code goes here
-        if(isVeg)
+        if(!topping)
         {
-            topping=true;
-            price+=70;
-        }
-        else {
-            topping=true;
-            price+=120;
+            if(isVeg)
+            {
+                topping=true;
+                price+=70;
+            }
+            else {
+                topping=true;
+                price+=120;
+            }
         }
     }
 
     public void addTakeaway(){
         // your code goes here
-        bag=true;
-        price+=20;
+        if(!bag)
+        {
+            bag=true;
+            price+=20;
+        }
     }
 
     public String getBill(){
